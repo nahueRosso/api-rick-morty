@@ -91,7 +91,7 @@ setTimeout(() => {
                 <div className="containerTexto">
                   <h2 className="nameCharacter">{result.name}</h2>
                   <h3 className="firsth3">
-                    <div className="circle" style={result.status =="Dead"?{backgroundColor:"red"}:result.status == "alive"?{backgroundColor:"green"}:{backgroundColor:"grey"}
+                    <div className="circle" style={result.status =="Dead"?{backgroundColor:"red"}:result.status == "Alive"?{backgroundColor:"green"}:{backgroundColor:"grey"}
                     } ></div>
                     {result.status} - {result.species}
                   </h3>
