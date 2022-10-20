@@ -100,7 +100,8 @@ setTimeout(() => {
                 </div>
               </div>
             );
-          })}
+          })
+          }
       </div>
  
 
