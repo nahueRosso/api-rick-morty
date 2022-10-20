@@ -74,20 +74,13 @@ setTimeout(() => {
       </div>
 
 
-      <div className="cards" ref={refe}>
+
+  <div className="cards" ref={refe}>
         {api.results
           .filter((result) => result.name.toLowerCase().includes(filter))
           .filter((result) => result.status.toLowerCase().includes(filterStatus))
           .filter((result) => result.species.toLowerCase().includes(filterSpecies))
-          .map((result, index) => {
-
-            // {if (result.status=="Dead") {
-            //   setCircleColor({backgroundColor:"red"})
-            // }if (result.status=="Alive") {
-            //   setCircleColor({backgroundColor:"green"})
-            // }else{
-            //   setCircleColor({backgroundColor:"grey"})
-            // }}
+          .map((result, index) => {         
             
             return (
               <div  className="containerCard" key={index}>
@@ -98,7 +91,7 @@ setTimeout(() => {
                 <div className="containerTexto">
                   <h2 className="nameCharacter">{result.name}</h2>
                   <h3 className="firsth3">
-                    <div className="circle" style={result.status =="Dead"?{backgroundColor:"red"}:{backgroundColor:"green"}
+                    <div className="circle" style={result.status =="Dead"?{backgroundColor:"red"}:result.status == "alive"?{backgroundColor:"green"}:{backgroundColor:"grey"}
                     } ></div>
                     {result.status} - {result.species}
                   </h3>
@@ -109,6 +102,11 @@ setTimeout(() => {
             );
           })}
       </div>
+ 
+
+
+
+     
 
       <div className="selecPages">
         <BiCaretLeft style={{fontSize:"2em",fill:"#ccc"}} onClick={arrowLeft}/>
