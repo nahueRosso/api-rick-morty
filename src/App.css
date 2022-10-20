@@ -148,12 +148,15 @@ h1 {
 
 
 
+
+
 ::-webkit-scrollbar {
-    background-color: #0d0538;
+    background-color: #748391;
     width: .3em;
     height: 0em;
 }
 
 ::-webkit-scrollbar-thumb{
-background-color: #748391;
+background-color: #282952;
+height: 40em;
 }
