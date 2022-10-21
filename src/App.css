@@ -12,6 +12,7 @@ h1 {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: columns;
   width: 100%;
   justify-content: space-around;
 }
